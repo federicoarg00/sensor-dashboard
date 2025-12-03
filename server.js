@@ -82,19 +82,3 @@ app.get('/', (req, res) => {
 app.listen(PORT, () => {
   console.log(`✓ Dashboard running on http://localhost:${PORT}`);
 });
-```
-
-**Your GitHub repository should have this structure:**
-
-sensor-dashboard/
-├── package.json
-├── server.js
-├── Dockerfile
-├── .env.example
-├── README.md
-└── public/
-    ├── index.html
-    ├── style.css
-    └── script.js
-
-    ```
