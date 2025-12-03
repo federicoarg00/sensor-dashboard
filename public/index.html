@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sensor Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🌡️ Sensor Dashboard</h1>
+      <p>Real-time monitoring of sensor data</p>
+      <p class="last-update">Last updated: <span id="lastUpdate">--</span></p>
+    </header>
+
+    <main>
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="sensors">Sensors</button>
+        <button class="tab-btn" data-tab="alarms">Alarms</button>
+      </div>
+
+      <section id="sensors-tab" class="tab-content active">
+        <div class="sensors-grid" id="sensorsGrid">
+          <p class="loading">Loading sensors...</p>
+        </div>
+      </section>
+
+      <section id="alarms-tab" class="tab-content">
+        <div class="alarms-container">
+          <table class="alarms-table" id="alarmsTable">
+            <thead>
+              <tr>
+                <th>Sensor ID</th>
+                <th>Time</th>
+                <th>Reading</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="alarmsBody">
+              <tr><td colspan="4" class="loading">Loading alarms...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
